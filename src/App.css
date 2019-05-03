@@ -1,0 +1,11 @@
+.container-fluid {
+    padding-left: 30px;
+}
+
+.fade-in {
+    opacity: 0;
+}
+.fade-in.visible {
+    transition: opacity 1s ease-in;
+    opacity: 1;
+}
