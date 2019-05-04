@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './App.css';
 import Nav from './Nav.js'
 import Article from './Article'
+import FadeIn from 'react-fade-in';
 require('datejs')
 
 class App extends Component {
@@ -33,16 +34,22 @@ class App extends Component {
   }
 
   render() {
+    var gridStyle = {
+      float: 'none',
+      margin: '0 auto'
+    }
     return (
       <div>
         <Nav filterSet={this.handler}/>
         <div className="container-fluid">
-          <div className = "row">
-              {this.state.data.filter(article => this.state.tag === "all" || article.tag === this.state.tag).map(filtered =>(
-                <div className={`col-md-3 fade-in ${this.state.didMount && 'visible'}`}>
-                  <Article imgurl={filtered.thumbnail} date={Date.parse(filtered.date.split('T')[0]).toString("M/dd/yyyy")} description={filtered.description} title={filtered.title} />  
-                </div>
-              ))}
+          <div id = "mainCont">
+            <div className = "row no-gutters">
+                {this.state.data.filter(article => this.state.tag === "all" || article.tag === this.state.tag).map(filtered =>(
+                  <div className={`griditem col-sm-12 col-lg-6 col-xl-3`}>
+                    <Article imgurl={filtered.thumbnail} date={Date.parse(filtered.date.split('T')[0]).toString("M/dd/yyyy")} description={filtered.description} title={filtered.title} />  
+                  </div>
+                ))}
+            </div>
           </div>
         </div>
       </div>

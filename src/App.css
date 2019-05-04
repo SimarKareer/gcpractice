@@ -1,11 +1,21 @@
-.container-fluid {
-    padding-left: 30px;
+/* .row {
+    margin-left: 40;
+} */
+/* 
+.basket {
+    transition: opacity 0.5s;
+    opacity: 1;
 }
 
-.fade-in {
+.basket.hide {
     opacity: 0;
-}
-.fade-in.visible {
-    transition: opacity 1s ease-in;
-    opacity: 1;
+    pointer-events:none;
+} */
+
+/* .griditem {
+    padding-left: 45px;
+} */
+
+#mainCont {
+    margin: 0 auto;
 }
