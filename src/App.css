@@ -16,6 +16,6 @@
     padding-left: 45px;
 } */
 
-#mainCont {
-    margin: 0 auto;
+#flbox {
+    display: flex
 }

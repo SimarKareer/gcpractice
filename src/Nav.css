@@ -55,3 +55,7 @@ li.selected:before {
 #logo:hover {
     cursor:pointer;
 }
+
+#btmhr {
+    padding-bottom: 45px;
+}

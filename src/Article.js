@@ -1,6 +1,6 @@
 import React from 'react';
 import './Article.css';
-
+import Img from 'react-image'
 
 class Article extends React.Component {
     render() {

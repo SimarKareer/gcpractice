@@ -3,6 +3,7 @@ import './App.css';
 import Nav from './Nav.js'
 import Article from './Article'
 import FadeIn from 'react-fade-in';
+import StackGrid from "react-stack-grid";
 require('datejs')
 
 class App extends Component {
@@ -41,17 +42,12 @@ class App extends Component {
     return (
       <div>
         <Nav filterSet={this.handler}/>
-        <div className="container-fluid">
-          <div id = "mainCont">
-            <div className = "row no-gutters">
-                {this.state.data.filter(article => this.state.tag === "all" || article.tag === this.state.tag).map(filtered =>(
-                  <div className={`griditem col-sm-12 col-lg-6 col-xl-3`}>
-                    <Article imgurl={filtered.thumbnail} date={Date.parse(filtered.date.split('T')[0]).toString("M/dd/yyyy")} description={filtered.description} title={filtered.title} />  
-                  </div>
-                ))}
-            </div>
-          </div>
-        </div>
+        <StackGrid columnWidth={300} gutterWidth={50}>
+          {this.state.data.filter(article => this.state.tag === "all" || article.tag === this.state.tag).map(filtered =>(
+              <Article imgurl={filtered.thumbnail} date={Date.parse(filtered.date.split('T')[0]).toString("M/dd/yyyy")} description={filtered.description} title={filtered.title} />  
+          ))}
+        </StackGrid>
+        
       </div>
     );
   }

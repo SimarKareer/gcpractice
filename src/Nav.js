@@ -34,7 +34,7 @@ class Nav extends React.Component {
                         <li className={this.state.selected === 4 ? selectedStyle.className : unselectedStyle.className} onClick={() => {this.props.filterSet('publicEngagement'); this.setState({selected: 4})}}>Public engagement</li>
                     </ul>
                 </div>
-                <hr></hr>
+                <hr id="btmhr"></hr>
             </div>
         );
     }
