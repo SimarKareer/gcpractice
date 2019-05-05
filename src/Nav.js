@@ -24,7 +24,7 @@ class Nav extends React.Component {
         }
         return (
             <div id="nav">
-                <img id="logo" onClick={() => {this.props.filterSet('all'); this.setState({selected: 0})}} src='https://s3.amazonaws.com/lpolepeddi/projects/gcp-fe/logo.jpg'></img>
+                <img alt="Missing Pic" id="logo" onClick={() => {this.props.filterSet('all'); this.setState({selected: 0})}} src='https://s3.amazonaws.com/lpolepeddi/projects/gcp-fe/logo.jpg'></img>
                 <hr></hr>
                 <div className="nav-items">
                     <ul className="list-inline">

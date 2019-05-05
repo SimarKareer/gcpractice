@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import './App.css';
 import Nav from './Nav.js'
 import Article from './Article'
-import FadeIn from 'react-fade-in';
 import StackGrid from "react-stack-grid";
 require('datejs')
 
@@ -30,15 +29,10 @@ class App extends Component {
       let pulled = data;
       this.setState({data: pulled});
       this.setState({didMount: true})
-      // console.log(this.state.data);
     })
   }
 
   render() {
-    var gridStyle = {
-      float: 'none',
-      margin: '0 auto'
-    }
     return (
       <div>
         <Nav filterSet={this.handler}/>

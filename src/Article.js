@@ -1,15 +1,13 @@
 import React from 'react';
 import './Article.css';
-import Img from 'react-image'
-
 class Article extends React.Component {
     render() {
         return(
             <div id="blk">
-                <img src={this.props.imgurl}></img>
-                <h6>{this.props.date}</h6>
+                <img alt="Missing Pic" src={this.props.imgurl}></img>
+                <p id="date">{this.props.date}</p>
                 <h5><b>{this.props.title}</b></h5>
-                <p>{this.props.description}</p>
+                <p id="description">{this.props.description}</p>
             </div>
         )
     }
